@@ -235,7 +235,7 @@ public class Library_manager
                     Book b = Books.get(i);
 
                     System.out.println(
-                        "Book name :" + b.getTitle()
+                          "  Book name :" + b.getTitle()
                         + "  Book author :" + b.getAuthor()
                         + "  Book genre :" + b.getGenre()
                         + "  Books available :" + b.getNumberOfBooks()
@@ -400,14 +400,7 @@ public class Library_manager
     {   
         System.out.println("-----Library manager-----");
 
-        Privileged test = new Privileged()
-        {
-            @Override
-            public String getPrivileges()
-            {
-                return "Temporary library access";
-            }
-        };
+        Privileged test = () -> "Temporary library access";
         System.out.println(test.getPrivileges());
 
 
